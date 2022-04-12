@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_sample/presentation/component/coustom_scaffold.dart';
+import 'package:flutter_web_sample/presentation/component/test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const CoustomScaffold(),
+      routes: {
+        TestPage.route: (context) => const TestPage(),
+      },
     );
   }
 }
