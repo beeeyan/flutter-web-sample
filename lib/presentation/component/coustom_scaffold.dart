@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
@@ -37,19 +36,58 @@ class CoustomScaffold extends StatelessWidget {
             route: '/test4',
           ),
         ],
-        selectedRoute: 'テスト1',
+        selectedRoute: '/test1',
       ),
       body: SingleChildScrollView(
-        child: BootstrapContainer(
-          fluid: true,
-          children: const <Widget>[
-           Text('aiu'),
-           Text('eo')
-          ],
-        ),
+        child: BootstrapContainer(fluid: true, children: <Widget>[
+          BootstrapContainer(
+            fluid: false,
+            decoration: const BoxDecoration(color: Colors.white),
+            padding: const EdgeInsets.only(top: 50),
+            children: <Widget>[
+              BootstrapRow(
+                height: 60,
+                children: <BootstrapCol>[
+                  BootstrapCol(
+                    sizes: 'col-6',
+                    child: const ContentWidget(
+                      text: 'col 1 of 2',
+                      color: Colors.red,
+                    ),
+                  ),
+                  BootstrapCol(
+                    sizes: 'col-6',
+                    child: const ContentWidget(
+                      text: 'col 2 of 2',
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ]),
       ),
-
     );
   }
-  
+}
+
+class ContentWidget extends StatelessWidget {
+  const ContentWidget({
+    Key? key,
+    required this.text,
+    required this.color,
+  }) : super(key: key);
+
+  final String text;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 50,
+      color: color,
+      child: Text(text),
+    );
+  }
 }
