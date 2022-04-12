@@ -64,6 +64,19 @@ class CoustomScaffold extends StatelessWidget {
                   ),
                 ],
               ),
+              BootstrapRow(
+                height: 60,
+                children: <BootstrapCol>[
+                  BootstrapCol(
+                    sizes: 'col-6',
+                    child: const Text('こっちはText'),
+                  ),
+                  BootstrapCol(
+                    sizes: 'col-6',
+                    child: const SelectableText('こっちはSelectableText'),
+                  ),
+                ],
+              ),
             ],
           ),
         ]),
