@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:flutter_web_sample/presentation/component/coustom_scaffold.dart';
-import 'package:flutter_web_sample/presentation/component/test.dart';
+import 'package:flutter_web_sample/presentation/component/home.dart';
+import 'package:flutter_web_sample/presentation/component/test1.dart';
+import 'package:flutter_web_sample/presentation/component/test2.dart';
+import 'package:flutter_web_sample/presentation/component/test3.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -17,20 +19,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const CoustomScaffold(),
       routes: {
-        TestPage.route: (context) => const TestPage(),
+        HomePage.route: (context) => const HomePage(),
+        Test1Page.route: (context) => const Test1Page(),
+        Test2Page.route: (context) => const Test2Page(),
+        Test3Page.route: (context) => const Test3Page(),
       },
     );
   }
