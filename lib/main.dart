@@ -4,6 +4,7 @@ import 'package:flutter_web_sample/presentation/component/home.dart';
 import 'package:flutter_web_sample/presentation/component/test1.dart';
 import 'package:flutter_web_sample/presentation/component/test2.dart';
 import 'package:flutter_web_sample/presentation/component/test3.dart';
+import 'package:flutter_web_sample/util/fade_transition_builder.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -20,6 +21,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        pageTransitionsTheme: const PageTransitionsTheme(
+              builders: <TargetPlatform, PageTransitionsBuilder>{
+                TargetPlatform.linux: FadePageTransitionsBuilder(),
+                TargetPlatform.macOS: FadePageTransitionsBuilder(),
+                TargetPlatform.windows: FadePageTransitionsBuilder(),
+              }),
       ),
       routes: {
         HomePage.route: (context) => const HomePage(),
