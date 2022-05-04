@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         pageTransitionsTheme: const PageTransitionsTheme(
               builders: <TargetPlatform, PageTransitionsBuilder>{
+                TargetPlatform.android: FadePageTransitionsBuilder(),
+                TargetPlatform.iOS: FadePageTransitionsBuilder(),
                 TargetPlatform.linux: FadePageTransitionsBuilder(),
                 TargetPlatform.macOS: FadePageTransitionsBuilder(),
                 TargetPlatform.windows: FadePageTransitionsBuilder(),
