@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
-import 'package:flutter_web_sample/presentation/component/home.dart';
-import 'package:flutter_web_sample/presentation/component/test1.dart';
-import 'package:flutter_web_sample/presentation/component/test2.dart';
-import 'package:flutter_web_sample/presentation/component/test3.dart';
+import 'package:flutter_web_sample/presentation/page/home.dart';
+import 'package:flutter_web_sample/presentation/page/test1.dart';
+import 'package:flutter_web_sample/presentation/page/test2.dart';
+import 'package:flutter_web_sample/presentation/page/test3.dart';
 
 ///　サイドバーを表示するためのラッパー
 ///
 ///
-class CoustomScaffold extends StatelessWidget {
-  const CoustomScaffold({
+class CustomScaffold extends StatelessWidget {
+  const CustomScaffold({
     Key? key,
     required this.route,
     required this.title,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_sample/presentation/component/coustom_scaffold.dart';
+import 'package:flutter_web_sample/presentation/component/custom_scaffold.dart';
 
 // URL
 class Test2Page extends StatelessWidget {
@@ -9,7 +9,7 @@ class Test2Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CoustomScaffold(
+    return const CustomScaffold(
         route: route,
         title: pageTitle,
         children: <Widget>[

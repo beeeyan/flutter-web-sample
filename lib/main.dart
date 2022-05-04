@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:flutter_web_sample/presentation/component/home.dart';
-import 'package:flutter_web_sample/presentation/component/test1.dart';
-import 'package:flutter_web_sample/presentation/component/test2.dart';
-import 'package:flutter_web_sample/presentation/component/test3.dart';
+import 'package:flutter_web_sample/presentation/page/home.dart';
+import 'package:flutter_web_sample/presentation/page/test1.dart';
+import 'package:flutter_web_sample/presentation/page/test2.dart';
+import 'package:flutter_web_sample/presentation/page/test3.dart';
 import 'package:flutter_web_sample/util/fade_transition_builder.dart';
 
 void main() {
