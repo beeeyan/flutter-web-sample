@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
-import 'package:flutter_web_sample/presentation/page/home.dart';
-import 'package:flutter_web_sample/presentation/page/test1.dart';
-import 'package:flutter_web_sample/presentation/page/test2.dart';
-import 'package:flutter_web_sample/presentation/page/test3.dart';
 import 'package:flutter_web_sample/util/fade_transition_builder.dart';
+import 'package:flutter_web_sample/util/route_generator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -34,12 +31,7 @@ class MyApp extends StatelessWidget {
                 TargetPlatform.windows: FadePageTransitionsBuilder(),
               }),
       ),
-      routes: {
-        HomePage.route: (context) => const HomePage(),
-        Test1Page.route: (context) => const Test1Page(),
-        Test2Page.route: (context) => const Test2Page(),
-        Test3Page.route: (context) => const Test3Page(),
-      },
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

@@ -5,18 +5,19 @@ import 'package:flutter_web_sample/presentation/page/home.dart';
 import 'package:flutter_web_sample/presentation/page/test1.dart';
 import 'package:flutter_web_sample/presentation/page/test2.dart';
 import 'package:flutter_web_sample/presentation/page/test3.dart';
+import 'package:flutter_web_sample/presentation/page/view_param.dart';
 
 ///　サイドバーを表示するためのラッパー
 ///
 ///
 class CustomScaffold extends StatelessWidget {
-  const CustomScaffold({
-    Key? key,
-    required this.route,
-    required this.title,
-    required this.children
-  }) : super(key: key);
-  
+  const CustomScaffold(
+      {Key? key,
+      required this.route,
+      required this.title,
+      required this.children})
+      : super(key: key);
+
   final String route;
   final String title;
   final List<Widget> children;
@@ -48,6 +49,10 @@ class CustomScaffold extends StatelessWidget {
             title: Test3Page.pageTitle,
             route: Test3Page.route,
           ),
+          MenuItem(
+            title: ViewParamPage.pageTitle,
+            route: ViewParamPage.route + '?param=get parameter',
+          ),
         ],
         selectedRoute: route,
         onSelected: (item) {
@@ -59,14 +64,12 @@ class CustomScaffold extends StatelessWidget {
       body: SingleChildScrollView(
         child: BootstrapContainer(fluid: true, children: <Widget>[
           BootstrapContainer(
-            fluid: false,
-            decoration: const BoxDecoration(color: Colors.white),
-            padding: const EdgeInsets.only(top: 50),
-            children: children
-          ),
+              fluid: false,
+              decoration: const BoxDecoration(color: Colors.white),
+              padding: const EdgeInsets.only(top: 50),
+              children: children),
         ]),
       ),
     );
   }
 }
-
