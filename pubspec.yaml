@@ -12,7 +12,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_admin_scaffold: ^1.1.0
+  flutter_adaptive_scaffold: ^0.0.4
+  flutter_admin_scaffold: ^1.1.2
   flutter_bootstrap: ^2.0.0
   flutter_hooks: ^0.18.3
   flutter_web_plugins:

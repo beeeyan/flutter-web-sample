@@ -33,23 +33,23 @@ class CustomScaffold extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
         textStyle: const TextStyle(color: Colors.white, fontSize: 16),
         items: const [
-          MenuItem(
+          AdminMenuItem(
             title: HomePage.pageTitle,
             route: HomePage.route,
           ),
-          MenuItem(
+          AdminMenuItem(
             title: Test1Page.pageTitle,
             route: Test1Page.route,
           ),
-          MenuItem(
+          AdminMenuItem(
             title: Test2Page.pageTitle,
             route: Test2Page.route,
           ),
-          MenuItem(
+          AdminMenuItem(
             title: Test3Page.pageTitle,
             route: Test3Page.route,
           ),
-          MenuItem(
+          AdminMenuItem(
             title: ViewParamPage.pageTitle,
             route: ViewParamPage.route + '?param=get parameter',
           ),
@@ -62,13 +62,9 @@ class CustomScaffold extends StatelessWidget {
         },
       ),
       body: SingleChildScrollView(
-        child: BootstrapContainer(fluid: true, children: <Widget>[
-          BootstrapContainer(
-              fluid: false,
-              decoration: const BoxDecoration(color: Colors.white),
-              padding: const EdgeInsets.only(top: 50),
-              children: children),
-        ]),
+        child: Column(
+          children: children,
+        ),
       ),
     );
   }
