@@ -187,7 +187,9 @@ class _$_Post implements _Post {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostToJson(this);
+    return _$$_PostToJson(
+      this,
+    );
   }
 }
 
@@ -201,15 +203,15 @@ abstract class _Post implements Post {
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
   @override // id
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override // 名前
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override // 作成日
   @DatetimeConverter()
-  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt;
   @override // 更新日
   @DatetimeConverter()
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt;
   @override
   @JsonKey(ignore: true)
   _$$_PostCopyWith<_$_Post> get copyWith => throw _privateConstructorUsedError;

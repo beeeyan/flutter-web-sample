@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
-import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:flutter_web_sample/presentation/page/home.dart';
 import 'package:flutter_web_sample/presentation/page/test1.dart';
 import 'package:flutter_web_sample/presentation/page/test2.dart';
