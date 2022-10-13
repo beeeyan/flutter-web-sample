@@ -10,8 +10,8 @@ class Test3Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScaffold(
-        route: route,
         title: pageTitle,
+        index: 3,
         children: <Widget>[
           Center(child: Text('test3'),)
         ]);

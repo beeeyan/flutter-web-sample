@@ -12,8 +12,8 @@ class ViewParamPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-        route: route,
         title: pageTitle,
+        index: 4,
         children: <Widget>[
           Center(child: Text('パラメータの表示 $param'),)
         ]);

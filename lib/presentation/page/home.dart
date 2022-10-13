@@ -11,51 +11,53 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
-      route: route,
+    return const CustomScaffold(
       title: pageTitle,
+      index: 0,
       children: <Widget>[
-        BootstrapRow(
-          height: 60,
-          children: <BootstrapCol>[
-            BootstrapCol(
-              sizes: 'col-6',
-              child: const Text('test1'),
-            ),
-          ],
-        ),
-        BootstrapRow(
-          height: 60,
-          children: <BootstrapCol>[
-            BootstrapCol(
-              sizes: 'col-6',
-              child: const ContentWidget(
-                text: 'col 1 of 2',
-                color: Colors.red,
-              ),
-            ),
-            BootstrapCol(
-              sizes: 'col-6',
-              child: const ContentWidget(
-                text: 'col 2 of 2',
-                color: Colors.red,
-              ),
-            ),
-          ],
-        ),
-        BootstrapRow(
-          height: 60,
-          children: <BootstrapCol>[
-            BootstrapCol(
-              sizes: 'col-6',
-              child: const Text('こっちはText'),
-            ),
-            BootstrapCol(
-              sizes: 'col-6',
-              child: const SelectableText('こっちはSelectableText'),
-            ),
-          ],
-        ),
+        Center(child: Text('test2'),)
+        // BootstrapRow(
+        //   height: 60,
+        //   children: <BootstrapCol>[
+        //     BootstrapCol(
+        //       sizes: 'col-6',
+        //       child: const Text('test1'),
+        //     ),
+        //   ],
+        // ),
+        // BootstrapRow(
+        //   height: 60,
+        //   children: <BootstrapCol>[
+        //     BootstrapCol(
+        //       sizes: 'col-6',
+        //       child: const ContentWidget(
+        //         text: 'col 1 of 2',
+        //         color: Colors.red,
+        //       ),
+        //     ),
+        //     BootstrapCol(
+        //       sizes: 'col-6',
+        //       child: const ContentWidget(
+        //         text: 'col 2 of 2',
+        //         color: Colors.red,
+        //       ),
+        //     ),
+        //   ],
+        // ),
+        // BootstrapRow(
+        //   height: 60,
+        //   children: <BootstrapCol>[
+        //     BootstrapCol(
+        //       sizes: 'col-6',
+        //       child: const Text('こっちはText'),
+        //     ),
+        //     BootstrapCol(
+        //       sizes: 'col-6',
+        //       child: const SelectableText('こっちはSelectableText'),
+        //     ),
+        //   ],
+        // ),
+
       ],
     );
   }

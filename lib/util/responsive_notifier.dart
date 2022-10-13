@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_sample/enum/resposive_type.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -34,6 +35,17 @@ class ResponsiveNotifier extends StateNotifier<ResponsiveState> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       state = state.copyWith(size: size);
     });
+  }
+
+  ResponsiveType getResponsiveType() {
+    final width = state.size.width;
+    if (state.mediumEnd <= width) {
+      return ResponsiveType.large;
+    } else if (state.mediumBegin <= width) {
+      return ResponsiveType.medium;
+    } else {
+      return ResponsiveType.small;
+    }
   }
 }
 
